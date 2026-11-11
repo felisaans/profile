@@ -128,8 +128,53 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
 .prev video{background:var(--mints)}
 .preview-placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:12px;color:var(--muted);font:10px/1.5 var(--mono);text-align:center;background:linear-gradient(135deg,var(--mints),var(--seas))}
 .prev.has-video .preview-placeholder{display:none}
-@media (max-width:760px){.prev{width:min(100%,320px);margin-top:16px}}
-@media (max-width:760px){.hero-top{grid-template-columns:1fr}.portrait{justify-self:start;max-width:170px;margin-right:10px}}
+.presensi-row{align-items:center}
+.presensi-row .preview-mobile{width:112px;aspect-ratio:9/16;margin-top:14px}
+.presensi-row .preview-mobile video{object-fit:cover}
+@media (max-width:760px){
+  .prev{width:min(100%,280px);margin-top:14px}
+  .presensi-row .preview-mobile{width:96px;margin-top:12px}
+  .presensi-row{align-items:start}
+  .hero-top{grid-template-columns:1fr}
+  .portrait{
+    justify-self:start;
+    width:112px;
+    max-width:112px;
+    height:112px;
+    max-height:112px;
+    margin:24px 10px 0 0;
+    overflow:visible;
+  }
+  .portrait::before{inset:6px -6px -6px 6px}
+  .portrait img{
+    display:block;
+    width:112px;
+    height:112px;
+    max-width:112px;
+    max-height:112px;
+    aspect-ratio:auto;
+    object-fit:cover;
+    object-position:50% 72%;
+  }
+}
+
+@media (max-width:760px){
+  figure.portrait{
+    box-sizing:border-box;
+    width:112px !important;
+    height:112px !important;
+    max-width:112px !important;
+    max-height:112px !important;
+  }
+  figure.portrait img{
+    box-sizing:border-box;
+    width:112px !important;
+    height:112px !important;
+    max-width:112px !important;
+    max-height:112px !important;
+    object-fit:cover !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -171,55 +216,61 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
     <div class="work-list">
       <article class="row rv">
         <div><h3>Aceh Discovery</h3><span class="badge"><span data-k="badge2">Live site</span></span>
-<figure class="prev rv" aria-label="Aceh Discovery video preview">
+          <figure class="prev rv" aria-label="Aceh Discovery video preview">
             <video class="pv" data-src="https://res.cloudinary.com/ojm5bajr/video/upload/v1794407617/ezgif-362161180ea96bfc.mp4" muted playsinline loop preload="none" aria-label="Aceh Discovery project preview"></video>
             <span class="preview-placeholder">Project preview</span>
-          </figure></div><div><p><span data-k="p_aceh">A tourism and culture website for Aceh covering food, culture, destinations, plus news and stories. It has an admin panel, a video hero and reveal animations that replay on scroll.</span></p><dl><dt>Stack</dt><dd>Laravel, Blade, Bootstrap</dd><dt><span data-k="d_design">Team</span></dt><dd><span data-k="v_uml">Built by Bit2Bit</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://aceh-discovery.site.je/" target="_blank" rel="noopener"><span data-k="b_site">Open site</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/aceh-discovery" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
+          </figure>
+        </div>
+        <div><p><span data-k="p_aceh">A tourism and culture website for Aceh covering food, culture, destinations, plus news and stories. It has an admin panel, a video hero and reveal animations that replay on scroll.</span></p><dl><dt>Stack</dt><dd>Laravel, Blade, Bootstrap</dd><dt><span data-k="d_design">Team</span></dt><dd><span data-k="v_uml">Built by Bit2Bit</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://aceh-discovery.site.je/" target="_blank" rel="noopener"><span data-k="b_site">Open site</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/aceh-discovery" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
       </article>
       <article class="row rv">
         <div><h3>North Sumatra Discovery</h3><span class="badge"><span data-k="badge2">Live site</span></span>
-        <figure class="prev rv" aria-label="North Sumatra Discoveryl video preview">
+          <figure class="prev rv" aria-label="North Sumatra Discovery video preview">
             <video class="pv" data-src="" muted playsinline loop preload="none" aria-label="North Sumatra Discovery project preview"></video>
             <span class="preview-placeholder">Preview coming soon</span>
-          </figure></div><div><p><span data-k="p_nsd">The next step after Aceh Discovery, for North Sumatra. Food and culture lead, destinations support, with the Ulos Electric colour palette. Version 2.0 is being planned as a community space for sharing experiences.</span></p><dl><dt>Stack</dt><dd>Laravel, Blade, Bootstrap</dd><dt><span data-k="d_team">Team</span></dt><dd><span data-k="v_partner">Built by Bit2Bit</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://north-sumatra-discovery.site.je/" target="_blank" rel="noopener"><span data-k="b_site">Open site</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
+          </figure>
+        </div>
+        <div><p><span data-k="p_nsd">The next step after Aceh Discovery, for North Sumatra. Food and culture lead, destinations support, with the Ulos Electric colour palette. Version 2.0 is being planned as a community space for sharing experiences.</span></p><dl><dt>Stack</dt><dd>Laravel, Blade, Bootstrap</dd><dt><span data-k="d_team">Team</span></dt><dd><span data-k="v_partner">Built by Bit2Bit</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://north-sumatra-discovery.site.je/" target="_blank" rel="noopener"><span data-k="b_site">Open site</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
       </article>
       <article class="row rv">
         <div><h3>SIMAG</h3><span class="badge"><span data-k="badge">Live demo</span></span>
-<figure class="prev rv" aria-label="SIMAG video preview">
+          <figure class="prev rv" aria-label="SIMAG video preview">
             <video class="pv" data-src="" muted playsinline loop preload="none" aria-label="SIMAG project preview"></video>
             <span class="preview-placeholder">Preview coming soon</span>
-          </figure></div><div><p><span data-k="p_simag">A web-based internship application system for students and campus admins, from submission through document verification.</span></p><dl><dt><span data-k="d_users">Users</span></dt><dd><span data-k="v_simag_u">Students and campus admins</span></dd><dt><span data-k="d_scope">Scope</span></dt><dd><span data-k="v_simag_s">Submission to document verification</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://felisaans.github.io/SIMAG/" target="_blank" rel="noopener"><span data-k="b_demo">Open demo</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/SIMAG" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
+          </figure>
+        </div>
+        <div><p><span data-k="p_simag">A web-based internship application system for students and campus admins, from submission through document verification.</span></p><dl><dt><span data-k="d_users">Users</span></dt><dd><span data-k="v_simag_u">Students and campus admins</span></dd><dt><span data-k="d_scope">Scope</span></dt><dd><span data-k="v_simag_s">Submission to document verification</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://felisaans.github.io/SIMAG/" target="_blank" rel="noopener"><span data-k="b_demo">Open demo</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/SIMAG" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
       </article>
       <article class="row rv">
         <div><h3>Moment &amp; Co.</h3><span class="badge"><span data-k="badge">Live demo</span></span>
-        <figure class="prev rv" aria-label="Moment &amp; Co. video preview">
-          <video
-            class="pv"
-            data-src="https://res.cloudinary.com/ojm5bajr/video/upload/v1794408607/ezgif-103a3f3009e471b4.mp4"
-            muted
-            playsinline
-            loop
-            preload="none"
-            aria-label="Moment &amp; Co. project preview">
-          </video>
-          <span class="preview-placeholder">
-            Preview coming soon
-          </span>
-        </figure></div><div><p><span data-k="p_moment">A rental site for custom acrylic greeting boards. Customers pick a design, edit the wording with a live preview, then book through WhatsApp.</span></p><dl><dt><span data-k="d_users">Users</span></dt><dd><span data-k="v_mom_u">Rental customers</span></dd><dt><span data-k="d_flow">Flow</span></dt><dd><span data-k="v_mom_f">Pick a design, edit text, book via WhatsApp</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://felisaans.github.io/Moment-and-Co./" target="_blank" rel="noopener"><span data-k="b_demo">Open demo</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/Moment-and-Co." target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
-      </article>
-      <article class="row rv">
-        <div><h3>Presensi Digital</h3><span class="badge"><span data-k="badge">Live demo</span></span>
-<figure class="prev rv" aria-label="Presensi Digital video preview">
-            <video class="pv" data-src="" muted playsinline loop preload="none" aria-label="Presensi Digital project preview"></video>
+          <figure class="prev rv" aria-label="Moment &amp; Co. video preview">
+            <video class="pv" data-src="https://res.cloudinary.com/ojm5bajr/video/upload/v1794408607/ezgif-103a3f3009e471b4.mp4" muted playsinline loop preload="none" aria-label="Moment &amp; Co. project preview"></video>
             <span class="preview-placeholder">Preview coming soon</span>
-          </figure></div><div><p><span data-k="p_pres">A QR-based attendance system for lecturers and students, connected to Google Sheets through Apps Script, with a schedule manager for lecturers.</span></p><dl><dt>Stack</dt><dd>Apps Script, Google Sheets, GitHub Pages</dd><dt><span data-k="d_ctx">Context</span></dt><dd><span data-k="v_pres_c">Software Engineering course project</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://felisaans.github.io/presensi-digital/" target="_blank" rel="noopener"><span data-k="b_demo">Open demo</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/presensi-digital/" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
+          </figure>
+        </div>
+        <div><p><span data-k="p_moment">A rental site for custom acrylic greeting boards. Customers pick a design, edit the wording with a live preview, then book through WhatsApp.</span></p><dl><dt><span data-k="d_users">Users</span></dt><dd><span data-k="v_mom_u">Rental customers</span></dd><dt><span data-k="d_flow">Flow</span></dt><dd><span data-k="v_mom_f">Pick a design, edit text, book via WhatsApp</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://felisaans.github.io/Moment-and-Co./" target="_blank" rel="noopener"><span data-k="b_demo">Open demo</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/Moment-and-Co." target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="row rv presensi-row">
+        <div><h3>Presensi Digital</h3><span class="badge"><span data-k="badge">Live demo</span></span>
+          <figure class="prev rv" aria-label="Presensi Digital desktop video preview">
+            <video class="pv" data-src="https://res.cloudinary.com/ojm5bajr/video/upload/v1794410621/ezgif-248cfdb22f659175.mp4" muted playsinline loop preload="none" aria-label="Presensi Digital desktop preview"></video>
+            <span class="preview-placeholder">Desktop preview<br>Paste desktop video URL</span>
+          </figure>
+          <figure class="prev preview-mobile rv" aria-label="Presensi Digital mobile video preview">
+            <video class="pv" data-src="" muted playsinline loop preload="none" aria-label="Presensi Digital mobile preview"></video>
+            <span class="preview-placeholder">Mobile preview<br>Paste mobile video URL</span>
+          </figure>
+        </div>
+        <div><p><span data-k="p_pres">A QR-based attendance system for lecturers and students, connected to Google Sheets through Apps Script, with a schedule manager for lecturers.</span></p><dl><dt>Stack</dt><dd>Apps Script, Google Sheets, GitHub Pages</dd><dt><span data-k="d_ctx">Context</span></dt><dd><span data-k="v_pres_c">Software Engineering course project</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://felisaans.github.io/presensi-digital/" target="_blank" rel="noopener"><span data-k="b_demo">Open demo</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/presensi-digital/" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
       </article>
       <article class="row rv">
         <div><h3>Birthday Surprise Site</h3><span class="badge"><span data-k="badge">Live demo</span></span>
-<figure class="prev rv" aria-label="Birthday Surprise Site video preview">
+          <figure class="prev rv" aria-label="Birthday Surprise Site video preview">
             <video class="pv" data-src="" muted playsinline loop preload="none" aria-label="Birthday Surprise Site project preview"></video>
             <span class="preview-placeholder">Preview coming soon</span>
-          </figure></div><div><p><span data-k="p_bday">An interactive birthday website template: photo gallery, love letter, reasons list and confetti.</span></p><dl><dt><span data-k="d_type">Type</span></dt><dd><span data-k="v_bd_t">Reusable template</span></dd><dt><span data-k="d_feat">Features</span></dt><dd><span data-k="v_bd_f">Gallery, letter, reasons, confetti</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://felisaans.github.io/cute-birthday-website/" target="_blank" rel="noopener"><span data-k="b_demo">Open demo</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/cute-birthday-website" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
+          </figure>
+        </div>
+        <div><p><span data-k="p_bday">An interactive birthday website template: photo gallery, love letter, reasons list and confetti.</span></p><dl><dt><span data-k="d_type">Type</span></dt><dd><span data-k="v_bd_t">Reusable template</span></dd><dt><span data-k="d_feat">Features</span></dt><dd><span data-k="v_bd_f">Gallery, letter, reasons, confetti</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://felisaans.github.io/cute-birthday-website/" target="_blank" rel="noopener"><span data-k="b_demo">Open demo</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/cute-birthday-website" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
       </article>
     </div>
   </div>
@@ -243,7 +294,7 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
     <div class="skills rv">
       <div><h3><span data-k="g1">Build</span></h3><ul><li>HTML, CSS, JavaScript</li><li>Laravel, Blade</li><li>Bootstrap</li><li><span data-k="i1">Responsive pages</span></li></ul></div>
       <div><h3><span data-k="g2">Work</span></h3><ul><li>Git, GitHub</li><li>Microsoft Office</li><li>Google Workspace</li><li>Google Apps Script</li></ul></div>
-      <div><h3><span data-k="g3">Think</span></h3><ul><li><span data-k="i2">Problem analysis</span><li><span data-k="i3">Practical solutions</span></li><li><span data-k="i4">Quick to learn new tools</span></li></ul></div>
+      <div><h3><span data-k="g3">Think</span></h3><ul><li><span data-k="i2">Problem analysis</span></li><li><span data-k="i3">Practical solutions</span></li><li><span data-k="i4">Quick to learn new tools</span></li></ul></div>
     </div>
   </div>
 </section>
@@ -275,6 +326,10 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
   document.getElementById('lang').addEventListener('click',function(){apply(root.lang==='id'?'en':'id')});
   var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('video.pv').forEach(function(v){
+    v.muted = true;
+    v.defaultMuted = true;
+    v.volume = 0;
+    v.setAttribute('muted','');
     var src=v.dataset.src;
     if(!src)return;
     v.closest('.prev').classList.add('has-video');
