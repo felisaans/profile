@@ -3,7 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Feliza Aziva — Portfolio</title>
+<title>Feliza Aziva · Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%230E7C7A%27/%3E%3Ctext x=%2750%27 y=%2769%27 font-size=%2760%27 font-family=%27sans-serif%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%23F5FBFA%27%3EF%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Feliza Aziva · Portfolio">
+<meta property="og:description" content="Informatics Engineering student at Jabal Ghafur University. Information systems, an Aceh culture guide and QR attendance.">
+<meta name="twitter:card" content="summary">
 <meta name="description" content="Portfolio of Feliza Aziva, Informatics Engineering student at Jabal Ghafur University. Information systems, an Aceh culture guide and QR attendance.">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Feliza Aziva Nuraninda Simatupang","jobTitle":"Informatics Engineering student","affiliation":{"@type":"CollegeOrUniversity","name":"Universitas Jabal Ghafur"},"sameAs":["https://github.com/felisaans","https://instagram.com/felisazv"]}</script>
@@ -242,6 +247,21 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
 .morebar{margin-top:clamp(40px,6vw,72px)}
 @media (min-width:761px){.row dl{gap:14px 20px}}
 @media (max-width:760px){.row dd{margin-bottom:16px}.row p{margin-bottom:28px}}
+
+/* nama hero: lebih kecil */
+.hero h1{font-size:clamp(2.1rem,4.8vw,4.2rem);font-weight:600;letter-spacing:-.045em;line-height:1.04}
+.hero .lede{margin-top:clamp(20px,2.4vw,32px)}
+.brand{display:inline-block;padding:14px 0}
+.direct a,footer a{display:inline-block;padding:10px 4px;min-height:24px}
+/* signature: peek under the hood */
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero>.wrap{position:relative;z-index:1}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle 300px at var(--mx,70%) var(--my,42%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 72%)}
+.under{opacity:.8;position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;color:var(--accent);font:400 12.5px/2.1 var(--mono);white-space:pre;user-select:none;padding-top:70px;
+  -webkit-mask-image:radial-gradient(circle 190px at var(--mx,70%) var(--my,42%),#000 0,rgba(0,0,0,.55) 50%,transparent 100%);mask-image:radial-gradient(circle 190px at var(--mx,70%) var(--my,42%),#000 0,rgba(0,0,0,.55) 50%,transparent 100%)}
+.peek{position:absolute;z-index:2;top:18px;right:var(--pad);margin:0;display:none}
+@media (hover:hover) and (pointer:fine){.peek{display:block}}
+@media (max-width:760px){.under{font-size:11px;-webkit-mask-image:radial-gradient(circle 130px at var(--mx,70%) var(--my,42%),#000 0,rgba(0,0,0,.55) 50%,transparent 100%);mask-image:radial-gradient(circle 130px at var(--mx,70%) var(--my,42%),#000 0,rgba(0,0,0,.55) 50%,transparent 100%)}}
 </style>
 </head>
 <body>
@@ -249,10 +269,12 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
 <header>
   <a class="brand" href="#top">Feliza Aziva N. S.</a>
   <div class="hr"><nav aria-label="Main"><a href="#tentang"><span data-k="n_tentang">About</span></a><a href="#karya"><span data-k="n_karya">Work</span></a><a href="#keahlian"><span data-k="n_keahlian">Skills</span></a><a href="#kontak"><span data-k="n_kontak">Contact</span></a></nav>
-  <button class="lang" id="lang" type="button" aria-label="Switch language / Ganti bahasa"><span class="l-en">EN</span><span aria-hidden="true">/</span><span class="l-id">ID</span></button></div>
+  <button class="lang" id="lang" type="button" aria-label="EN / ID, switch language"><span class="l-en">EN</span><span aria-hidden="true">/</span><span class="l-id">ID</span></button></div>
 </header>
 <main id="main">
 <section class="hero" id="top" aria-labelledby="nama">
+  <div class="under" id="under" aria-hidden="true"></div>
+  <p class="peek mono" aria-hidden="true"><span data-k="peek">Move your cursor to peek under the hood</span></p>
   <div class="wrap hero-top" style="width:100%">
     <div>
     <h1 id="nama">
@@ -283,10 +305,10 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
   <div class="wrap two">
     <div><span class="mono label rv"><span data-k="a1">About</span></span><h2 id="h-tentang" class="rv"><span data-k="a2">Curiosity-driven, solution-oriented.</span></h2></div>
     <div class="rv" style="--d:100ms">
-      <p><span data-k="a3">I’m a 5th semester Informatics Engineering student at Jabal Ghafur University. I like turning random ideas into something real, and I build projects not just to make them work, but to understand how they work and how they can be better.</span></p><p><span data-k="a4">My interests are web development, programming, problem solving and the creative side of technology. I’m also improving my English, especially listening and speaking, to communicate with more confidence.</span></p>
+      <p><span data-k="a3">I’m a 5th semester Informatics Engineering student at Jabal Ghafur University. I like turning random ideas into something real. Each project is a chance to understand how things work and how I can make them better.</span></p><p><span data-k="a4">My interests are web development, programming, problem solving and the creative side of technology. I’m also improving my English, especially listening and speaking, to communicate with more confidence.</span></p>
       <ol class="tl" style="margin-top:40px">
         <li><span class="mono"><span data-k="t1d">Ongoing</span></span><div><h3><span data-k="t1h">Informatics Engineering, UNIGHA</span></h3><p><span data-k="t1p">Jabal Ghafur University, Sigli, Pidie, Aceh. Now in semester 5; course and personal projects are where I practise building products.</span></p></div></li>
-        <li><span class="mono">2020 – 2023</span><div><h3><span data-k="t2h">Vocational school, Computer and Network Engineering</span></h3><p><span data-k="t2p">SMK Tri Bhakti Lampung and SMKS Prayatna 2 Medan. A grounding in computers and networks.</span></p></div></li>
+        <li><span class="mono"><span data-k="t2d">2020 to 2023</span></span><div><h3><span data-k="t2h">Vocational school, Computer and Network Engineering</span></h3><p><span data-k="t2p">SMK Tri Bhakti Lampung and SMKS Prayatna 2 Medan. A grounding in computers and networks.</span></p></div></li>
       </ol>
     </div>
   </div>
@@ -313,7 +335,7 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
             <span class="preview-placeholder">Preview coming soon</span>
           </figure>
         </div>
-        <div><p><span data-k="p_nsd">The next step after Aceh Discovery, for North Sumatra. Food and culture lead, destinations support, with the Ulos Electric colour palette. Version 2.0 is being planned as a community space for sharing experiences.</span></p><dl><dt>Stack</dt><dd>Laravel, Blade, Bootstrap</dd><dt><span data-k="d_lang">Site language</span></dt><dd><span data-k="v_lang_id">Indonesian</span></dd><dt><span data-k="d_team">Team</span></dt><dd><span data-k="v_partner">Built by Bit2Bit</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://north-sumatra-discovery.site.je/" target="_blank" rel="noopener"><span data-k="b_site">Open site</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/north-sumatra-discovery" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
+        <div><p><span data-k="p_nsd">The next step after Aceh Discovery, for North Sumatra. Food and culture lead, destinations support, with the Ulos Electric colour palette. Version 2.0 is now live, with a more polished look and a stronger community section where visitors can share their experiences.</span></p><dl><dt>Stack</dt><dd>Laravel, Blade, Bootstrap</dd><dt><span data-k="d_lang">Site language</span></dt><dd><span data-k="v_lang_id">Indonesian</span></dd><dt><span data-k="d_team">Team</span></dt><dd><span data-k="v_partner">Built by Bit2Bit</span></dd></dl><div class="cta" style="margin:0"><a class="btn" href="https://north-sumatra-discovery.site.je/" target="_blank" rel="noopener"><span data-k="b_site">Open site</span> <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/felisaans/north-sumatra-discovery" target="_blank" rel="noopener"><span data-k="b_repo">Repository</span> <span class="arr" aria-hidden="true">↗</span></a></div></div>
       </article>
       <div class="more" id="more-work"><div class="more-in">
       <article class="row rv">
@@ -404,10 +426,10 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
 <footer class="mono"><span>© 2026 Feliza Aziva N. S.</span><a href="#top"><span data-k="top">Back to top</span> ↑</a></footer>
 <script>
 (function(){
-  var D={"badge2": "Situs online", "p_aceh": "Situs wisata dan budaya Aceh: kuliner, budaya, destinasi, serta berita dan cerita. Dilengkapi panel admin, hero video, dan animasi muncul yang berulang saat di-scroll.", "d_design": "Tim", "v_uml": "Dibuat oleh Bit2Bit", "b_site": "Buka situs", "b_repo": "Repository", "p_nsd": "Pengembangan dari Aceh Discovery untuk Sumatera Utara. Kuliner dan budaya jadi isi utama, destinasi pelengkap, dengan palet warna Ulos Electric. Versi 2.0 sedang dirancang sebagai ruang komunitas untuk berbagi pengalaman.", "d_team": "Tim", "v_partner": "Dibuat oleh Bit2Bit", "badge": "Demo online",
+  var D={"badge2": "Situs online", "p_aceh": "Situs wisata dan budaya Aceh: kuliner, budaya, destinasi, serta berita dan cerita. Dilengkapi panel admin, hero video, dan animasi muncul yang berulang saat di-scroll.", "d_design": "Tim", "v_uml": "Dibuat oleh Bit2Bit", "b_site": "Buka situs", "b_repo": "Repository", "p_nsd": "Pengembangan dari Aceh Discovery untuk Sumatera Utara. Kuliner dan budaya jadi isi utama, destinasi pelengkap, dengan palet warna Ulos Electric. Versi 2.0 sudah rilis, dengan tampilan yang lebih rapi dan bagian komunitas yang lebih kuat, tempat pengunjung bisa berbagi pengalaman.", "d_team": "Tim", "v_partner": "Dibuat oleh Bit2Bit", "badge": "Demo online",
 "badge3": "Iseng-iseng", "p_simag": "Sistem informasi pengajuan magang berbasis web untuk mahasiswa dan admin kampus, dari pengajuan sampai verifikasi dokumen.", "d_users": "Pengguna", "v_simag_u": "Mahasiswa dan admin kampus", "d_scope": "Cakupan", "v_simag_s": "Pengajuan sampai verifikasi dokumen", "b_demo": "Buka demo", "p_moment": "Situs penyewaan papan ucapan akrilik kustom. Pelanggan memilih desain, mengubah tulisan dengan pratinjau langsung, lalu memesan lewat WhatsApp.", "v_mom_u": "Pelanggan penyewaan", "d_flow": "Alur", "v_mom_f": "Pilih desain, ubah tulisan, pesan via WhatsApp", "p_pres": "Sistem presensi berbasis QR untuk dosen dan mahasiswa, terhubung ke Google Sheets lewat Apps Script, dengan fitur Kelola Jadwal untuk dosen.", "d_ctx": "Konteks", "v_pres_c": "Proyek mata kuliah Rekayasa Perangkat Lunak", "p_bday": "Proyek iseng untuk senang-senang, bukan produk serius: situs ulang tahun interaktif yang lucu dengan galeri foto, surat cinta, daftar alasan, dan konfeti.", "d_type": "Jenis", "v_bd_t": "Proyek iseng", "d_feat": "Fitur", "v_bd_f": "Galeri, surat, daftar alasan, konfeti",
 "d_lang": "Bahasa situs", "v_lang_id": "Bahasa Indonesia", "v_lang_en": "Bahasa Inggris", "v_lang_both": "Indonesia dan Inggris",
-"skip": "Lompat ke konten", "more": "Tampilkan proyek lainnya", "less": "Tampilkan lebih sedikit", "n_karya": "Karya", "n_tentang": "Tentang", "n_keahlian": "Keahlian", "n_kontak": "Kontak", "lede": "Mahasiswi Teknik Informatika yang senang mengeksplorasi teknologi, memahami cara kerja berbagai hal, dan menemukan pendekatan kreatif dalam menghadapi tantangan.", "c1": "Lihat proyek", "c2": "Hubungi saya", "f1": "Kampus", "f2": "Program", "f2v": "Teknik Informatika, semester 5", "f3": "Fokus", "f3v": "Web development dan pemecahan masalah", "f4": "Latar belakang", "f4v": "SMK Teknik Komputer dan Jaringan", "w1": "Proyek terkini", "w2": "Beberapa proyek yang bisa langsung dicoba.", "w3": "Aku masih pemula (untuk sekarang), jadi proyek-proyek ini masih sederhana. Tiap proyek adalah satu langkah belajar membangun sesuatu.", "a1": "Tentang", "a2": "Selalu ingin tahu, senang mencari solusi.", "a3": "Saya mahasiswi semester 5 Teknik Informatika di Universitas Jabal Ghafur. Saya suka mengubah ide acak menjadi sesuatu yang nyata, dan membangun proyek bukan hanya supaya berjalan, tetapi supaya mengerti cara kerjanya dan bagaimana memperbaikinya.", "a4": "Minat saya ada di web development, pemrograman, pemecahan masalah, dan sisi kreatif teknologi. Saya juga melatih Bahasa Inggris, terutama listening dan speaking, agar bisa berkomunikasi dengan lebih percaya diri.", "t1d": "Berjalan", "t1h": "Teknik Informatika, UNIGHA", "t1p": "Universitas Jabal Ghafur, Sigli, Pidie, Aceh. Sekarang di semester 5; proyek mata kuliah dan proyek pribadi menjadi ruang latihan membangun produk.", "t2h": "SMK Teknik Komputer dan Jaringan", "t2p": "SMK Tri Bhakti Lampung dan SMKS Prayatna 2 Medan. Dasar komputer dan jaringan.", "s1": "Keahlian", "s2": "Apa yang saya bawa.", "g1": "Membangun", "g2": "Bekerja", "g3": "Berpikir", "i1": "Pengembangan web responsif", "i2": "Kemampuan belajar mandiri", "i3": "Analisis masalah", "i4": "Solusi praktis", "i5": "Cepat memahami hal baru", "k1": "Kontak", "k2": "Punya pertanyaan atau ide proyek?", "top": "Kembali ke atas", "cap_dosen": "Portal Dosen", "cap_admin": "Admin Kampus", "cap_mhs": "Mahasiswa", "cap_mob": "Tampilan HP", "cv_soon": "CV: segera hadir", "cv_get": "Unduh CV", "f_name": "Nama", "f_email": "Email kamu", "f_msg": "Pesan", "f_send": "Kirim pesan", "f_direct": "Atau email langsung:", "m_sending": "Mengirim…", "m_ok": "Terima kasih! Pesanmu sudah terkirim.", "m_fb": "Tidak bisa mengirim langsung, jadi aplikasi emailmu dibuka.", "m_req": "Mohon isi semua kolom dengan benar.", "meta": "Portofolio Feliza Aziva, mahasiswi Teknik Informatika Universitas Jabal Ghafur. Sistem informasi, situs budaya Aceh, dan presensi QR."};
+"skip": "Lompat ke konten", "peek": "Gerakkan kursor untuk mengintip di balik layar", "t2d": "2020 sampai 2023", "more": "Tampilkan proyek lainnya", "less": "Tampilkan lebih sedikit", "n_karya": "Karya", "n_tentang": "Tentang", "n_keahlian": "Keahlian", "n_kontak": "Kontak", "lede": "Mahasiswi Teknik Informatika yang senang mengeksplorasi teknologi, memahami cara kerja berbagai hal, dan menemukan pendekatan kreatif dalam menghadapi tantangan.", "c1": "Lihat proyek", "c2": "Hubungi saya", "f1": "Kampus", "f2": "Program", "f2v": "Teknik Informatika, semester 5", "f3": "Fokus", "f3v": "Web development dan pemecahan masalah", "f4": "Latar belakang", "f4v": "SMK Teknik Komputer dan Jaringan", "w1": "Proyek terkini", "w2": "Beberapa proyek yang bisa langsung dicoba.", "w3": "Aku masih pemula (untuk sekarang), jadi proyek-proyek ini masih sederhana. Tiap proyek adalah satu langkah belajar membangun sesuatu.", "a1": "Tentang", "a2": "Selalu ingin tahu, senang mencari solusi.", "a3": "Saya mahasiswi semester 5 Teknik Informatika di Universitas Jabal Ghafur. Saya suka mengubah ide acak menjadi sesuatu yang nyata. Setiap proyek adalah kesempatan untuk memahami cara kerjanya dan memperbaikinya.", "a4": "Minat saya ada di web development, pemrograman, pemecahan masalah, dan sisi kreatif teknologi. Saya juga melatih Bahasa Inggris, terutama listening dan speaking, agar bisa berkomunikasi dengan lebih percaya diri.", "t1d": "Berjalan", "t1h": "Teknik Informatika, UNIGHA", "t1p": "Universitas Jabal Ghafur, Sigli, Pidie, Aceh. Sekarang di semester 5; proyek mata kuliah dan proyek pribadi menjadi ruang latihan membangun produk.", "t2h": "SMK Teknik Komputer dan Jaringan", "t2p": "SMK Tri Bhakti Lampung dan SMKS Prayatna 2 Medan. Dasar komputer dan jaringan.", "s1": "Keahlian", "s2": "Apa yang saya bawa.", "g1": "Membangun", "g2": "Bekerja", "g3": "Berpikir", "i1": "Pengembangan web responsif", "i2": "Kemampuan belajar mandiri", "i3": "Analisis masalah", "i4": "Solusi praktis", "i5": "Cepat memahami hal baru", "k1": "Kontak", "k2": "Punya pertanyaan atau ide proyek?", "top": "Kembali ke atas", "cap_dosen": "Portal Dosen", "cap_admin": "Admin Kampus", "cap_mhs": "Mahasiswa", "cap_mob": "Tampilan HP", "cv_soon": "CV: segera hadir", "cv_get": "Unduh CV", "f_name": "Nama", "f_email": "Email kamu", "f_msg": "Pesan", "f_send": "Kirim pesan", "f_direct": "Atau email langsung:", "m_sending": "Mengirim…", "m_ok": "Terima kasih! Pesanmu sudah terkirim.", "m_fb": "Tidak bisa mengirim langsung, jadi aplikasi emailmu dibuka.", "m_req": "Mohon isi semua kolom dengan benar.", "meta": "Portofolio Feliza Aziva, mahasiswi Teknik Informatika Universitas Jabal Ghafur. Sistem informasi, situs budaya Aceh, dan presensi QR."};
   var root=document.documentElement,metaEl=document.querySelector('meta[name="description"]'),enMeta=metaEl.getAttribute('content');
   function apply(l){
     document.querySelectorAll('[data-k]').forEach(function(el){if(!el.dataset.en)el.dataset.en=el.innerHTML;el.innerHTML=l==='id'?D[el.dataset.k]:el.dataset.en});
@@ -457,6 +479,32 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
     mw.classList.toggle('open',open);mb.setAttribute('aria-expanded',open?'true':'false');
     if(!open){var h=document.getElementById('h-karya');if(h)h.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'})}
   });
+
+  (function(){
+    var hero=document.getElementById('top'),under=document.getElementById('under');
+    if(!hero||!under)return;
+    var L=["Route::get('/discover', [PlaceController::class, 'index']);","@foreach ($places as $place) <x-card :place=\"$place\" /> @endforeach","function doGet(e) { return SpreadsheetApp.getActive().getSheetByName('Presensi'); }","const lang = localStorage.getItem('lang') || 'en';","git commit -m \"still learning, still building\"","while (curious) { build(); learn(); }","<section class=\"hero\" aria-labelledby=\"nama\">","php artisan serve"],rows=[];
+    for(var i=0;i<30;i++){var t='';for(var k=0;t.length<260;k++)t+=L[(i*3+k)%L.length]+'      ';rows.push(t)}
+    under.textContent=rows.join('\n');
+    var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(rm){hero.style.setProperty('--mx','68%');hero.style.setProperty('--my','42%');return}
+    var cx=0,cy=0,tx=0,ty=0,mode='idle',vis=true,raf=0,t0=performance.now(),w=1,h=1;
+    function size(){var r=hero.getBoundingClientRect();w=r.width;h=r.height}
+    size();cx=tx=w*.7;cy=ty=h*.42;
+    addEventListener('resize',size);
+    hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;mode='pointer';start()});
+    hero.addEventListener('pointerleave',function(){mode='idle'});
+    function frame(now){
+      raf=0;if(!vis)return;
+      if(mode==='idle'){var s=(now-t0)/1000;tx=w*(.62+.2*Math.sin(s*.45));ty=h*(.45+.22*Math.sin(s*.31+1.2))}
+      cx+=(tx-cx)*.09;cy+=(ty-cy)*.09;
+      hero.style.setProperty('--mx',cx.toFixed(1)+'px');hero.style.setProperty('--my',cy.toFixed(1)+'px');
+      raf=requestAnimationFrame(frame);
+    }
+    function start(){if(!raf&&vis)raf=requestAnimationFrame(frame)}
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)start()}).observe(hero);
+    start();
+  })();
   var els=document.querySelectorAll('.rv');
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
   var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15,rootMargin:'0px 0px -5% 0px'});
