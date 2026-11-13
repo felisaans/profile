@@ -223,6 +223,25 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
 #more-btn[aria-expanded="true"] .t-less{display:inline}
 #more-btn .chev{display:inline-block;transition:transform .5s var(--e),translate .4s var(--e)}
 #more-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+
+/* karya: more breathing room */
+#karya{padding-top:clamp(88px,13vw,176px);padding-bottom:clamp(88px,13vw,176px)}
+#karya h2{margin-bottom:28px!important}
+.wnote{margin-bottom:clamp(56px,9vw,112px)}
+.work-list{border-top:1px solid var(--line)}
+.work-list:hover .row:not(:hover):not(:focus-within){opacity:.6}
+.row{gap:24px clamp(32px,6vw,112px);padding:clamp(48px,8vw,120px) 0}
+.row p{margin:0 0 32px;max-width:52ch;line-height:1.75}
+.row dl{margin:0 0 36px;line-height:1.6}
+.row .cta{gap:16px}
+.badge{margin-top:20px}
+.prev{margin:32px 0 12px;border-color:var(--line);box-shadow:6px 6px 0 color-mix(in srgb,var(--mint) 55%,transparent)}
+.prevs{margin:32px 0 12px;gap:24px}
+.pitem .prev{margin:0}
+.pitem.solo{margin:32px 0 12px}
+.morebar{margin-top:clamp(40px,6vw,72px)}
+@media (min-width:761px){.row dl{gap:14px 20px}}
+@media (max-width:760px){.row dd{margin-bottom:16px}.row p{margin-bottom:28px}}
 </style>
 </head>
 <body>
