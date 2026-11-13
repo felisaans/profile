@@ -214,6 +214,11 @@ footer{padding:28px var(--pad) 40px;display:flex;justify-content:space-between;f
 .js .more:not(.open) .more-in{visibility:hidden;transition:visibility 0s .8s}
 .morebar{display:none;justify-content:center;margin-top:clamp(28px,4vw,48px)}
 .js .morebar{display:flex}
+#more-btn{border:0;background:none;padding:11px 14px;color:var(--ink)}
+#more-btn::before{display:none}
+#more-btn:hover,#more-btn:focus-visible{color:var(--accent)}
+#more-btn>span:first-child,#more-btn>.t-less{background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;padding-bottom:3px;transition:background-size .45s var(--e)}
+#more-btn:hover>.t-more,#more-btn:hover>.t-less,#more-btn:focus-visible>.t-more,#more-btn:focus-visible>.t-less{background-size:100% 2px}
 #more-btn .t-less,#more-btn[aria-expanded="true"] .t-more{display:none}
 #more-btn[aria-expanded="true"] .t-less{display:inline}
 #more-btn .chev{display:inline-block;transition:transform .5s var(--e),translate .4s var(--e)}
